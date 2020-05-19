@@ -100,4 +100,19 @@ object KotlinTest : BuildType({
 
 object MochaExamples : Project({
     name = "Mocha Examples"
+
+    buildType(MochaExamples_MochoTest2)
+})
+
+object MochaExamples_MochoTest2 : BuildType({
+    name = "mocho test 2"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
 })
