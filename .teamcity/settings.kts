@@ -35,6 +35,8 @@ project {
     vcsRoot(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1)
 
     buildType(BuildTest2)
+
+    subProject(KtsTesting)
 }
 
 object BuildTest2 : BuildType({
@@ -95,4 +97,9 @@ object HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1 : GitVcsRoot({
         userName = "mitesh-devops"
         password = "credentialsJSON:e7cd95f6-6f34-4e08-a818-0612697751f6"
     }
+})
+
+
+object KtsTesting : Project({
+    name = "KTS Testing"
 })
