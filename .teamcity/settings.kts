@@ -102,9 +102,4 @@ object KotlinTest : BuildType({
             runnerArgs = "-Dmaven.test.failure.ignore=true"
         }
     }
-
-    triggers {
-        vcs {
-        }
-    }
 })
