@@ -102,4 +102,19 @@ object HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1 : GitVcsRoot({
 
 object KtsTesting : Project({
     name = "KTS Testing"
+
+    buildType(KtsTesting_KtsTesting)
+})
+
+object KtsTesting_KtsTesting : BuildType({
+    name = "KTS Testing"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
 })
