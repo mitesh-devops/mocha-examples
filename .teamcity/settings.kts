@@ -33,6 +33,8 @@ project {
 
     buildType(KotlinTest)
     buildType(BuildTest2)
+
+    subProject(MochaExamples)
 }
 
 object BuildTest2 : BuildType({
@@ -93,4 +95,9 @@ object KotlinTest : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+})
+
+
+object MochaExamples : Project({
+    name = "Mocha Examples"
 })
