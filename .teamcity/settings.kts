@@ -66,6 +66,7 @@ object BuildTest2 : BuildType({
 
     triggers {
         vcs {
+            enabled = false
             quietPeriodMode = VcsTrigger.QuietPeriodMode.USE_DEFAULT
             branchFilter = ""
         }
