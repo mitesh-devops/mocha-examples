@@ -31,7 +31,6 @@ version = "2019.2"
 
 project {
 
-    buildType(KotlinTest)
     buildType(BuildTest2)
 
     subProject(MochaExamples)
@@ -86,14 +85,6 @@ object BuildTest2 : BuildType({
             comparison = BuildFailureOnMetric.MetricComparison.DIFF
             compareTo = value()
         }
-    }
-})
-
-object KotlinTest : BuildType({
-    name = "Kotlin Test"
-
-    vcs {
-        root(DslContext.settingsRoot)
     }
 })
 
