@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.maven
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.BuildFailureOnMetric
 import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.failOnMetricChange
@@ -93,13 +92,5 @@ object KotlinTest : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
-    }
-
-    steps {
-        maven {
-            goals = "clean test"
-            pomLocation = ".teamcity/pom.xml"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
     }
 })
