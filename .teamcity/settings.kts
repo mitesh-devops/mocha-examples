@@ -34,7 +34,6 @@ project {
 
     vcsRoot(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1)
 
-    buildType(DslTesting)
     buildType(BuildTest2)
 }
 
@@ -85,19 +84,6 @@ object BuildTest2 : BuildType({
             units = BuildFailureOnMetric.MetricUnit.DEFAULT_UNIT
             comparison = BuildFailureOnMetric.MetricComparison.DIFF
             compareTo = value()
-        }
-    }
-})
-
-object DslTesting : BuildType({
-    name = "DSL Testing"
-
-    vcs {
-        root(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1)
-    }
-
-    triggers {
-        vcs {
         }
     }
 })
