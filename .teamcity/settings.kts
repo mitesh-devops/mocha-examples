@@ -4,7 +4,6 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.BuildFailu
 import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.failOnMetricChange
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -31,8 +30,6 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2019.2"
 
 project {
-
-    vcsRoot(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1)
 
     buildType(BuildTest2)
 }
@@ -86,14 +83,5 @@ object BuildTest2 : BuildType({
             comparison = BuildFailureOnMetric.MetricComparison.DIFF
             compareTo = value()
         }
-    }
-})
-
-object HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1 : GitVcsRoot({
-    name = "https://github.com/mitesh-devops/mocha-examples.git#refs/heads/master (1)"
-    url = "https://github.com/mitesh-devops/mocha-examples.git"
-    authMethod = password {
-        userName = "mitesh-devops"
-        password = "credentialsJSON:e7cd95f6-6f34-4e08-a818-0612697751f6"
     }
 })
