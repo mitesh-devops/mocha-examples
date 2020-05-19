@@ -31,6 +31,7 @@ version = "2019.2"
 
 project {
 
+    buildType(KotlinTest)
     buildType(BuildTest2)
 }
 
@@ -82,6 +83,19 @@ object BuildTest2 : BuildType({
             units = BuildFailureOnMetric.MetricUnit.DEFAULT_UNIT
             comparison = BuildFailureOnMetric.MetricComparison.DIFF
             compareTo = value()
+        }
+    }
+})
+
+object KotlinTest : BuildType({
+    name = "Kotlin Test"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
         }
     }
 })
