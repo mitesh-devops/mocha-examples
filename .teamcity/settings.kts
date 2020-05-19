@@ -32,8 +32,6 @@ version = "2019.2"
 project {
 
     buildType(BuildTest2)
-
-    subProject(MochaExamples)
 }
 
 object BuildTest2 : BuildType({
@@ -86,9 +84,4 @@ object BuildTest2 : BuildType({
             compareTo = value()
         }
     }
-})
-
-
-object MochaExamples : Project({
-    name = "Mocha Examples"
 })
