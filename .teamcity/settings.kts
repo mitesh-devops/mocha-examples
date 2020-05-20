@@ -35,7 +35,7 @@ version = "2019.2"
 project {
 
     vcsRoot(Angularproject)
-    vcsRoot(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1)
+    vcsRoot(HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster2)
     vcsRoot(HttpsGitlabComMiteshITadcornerNodeUnitTestsGitRefsHeadsDevelop)
     vcsRoot(Develop)
     vcsRoot(HttpsGitlabComMiteshITadcornerTestingProjectGitRefsHeadsMaster)
@@ -228,6 +228,10 @@ object CodeCoverageExample : BuildType({
         vcs {
         }
     }
+
+    failureConditions {
+        errorMessage = true
+    }
 })
 
 object ExpressApp : BuildType({
@@ -348,8 +352,8 @@ object HttpsGithubComMiteshDevopsIstanbulCodeCoverageExampleGitRefsHeadsMaster :
     }
 })
 
-object HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster1 : GitVcsRoot({
-    name = "https://github.com/mitesh-devops/mocha-examples.git#refs/heads/master (1)"
+object HttpsGithubComMiteshDevopsMochaExamplesGitRefsHeadsMaster2 : GitVcsRoot({
+    name = "https://github.com/mitesh-devops/mocha-examples.git#refs/heads/master (2)"
     url = "https://github.com/mitesh-devops/mocha-examples.git"
     authMethod = password {
         userName = "mitesh-devops"
