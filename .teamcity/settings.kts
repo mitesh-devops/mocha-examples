@@ -47,6 +47,8 @@ project {
 
     buildType(Kuberetes)
     buildType(BuildTest)
+    buildType(KotlinTest)
+    buildType(KotlinTest1)
     buildType(ExpressApp)
     buildType(CodeCoverageExample)
 
@@ -285,6 +287,32 @@ object ExpressApp : BuildType({
                 gitlabApiUrl = "https://gitlab.com/api/v4"
                 accessToken = "credentialsJSON:c4ec1430-4f58-4ecc-b522-bc428f12ca5a"
             }
+        }
+    }
+})
+
+object KotlinTest : BuildType({
+    name = "Kotlin Test"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+})
+
+object KotlinTest1 : BuildType({
+    name = "Kotlin Test 1"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
         }
     }
 })
