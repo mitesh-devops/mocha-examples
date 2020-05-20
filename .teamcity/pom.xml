@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>MochaExamples Config DSL Script</name>
-  <groupId>MochaExamples</groupId>
-  <artifactId>MochaExamples_dsl</artifactId>
+  <name>MiteshTest Config DSL Script</name>
+  <groupId>MiteshTest</groupId>
+  <artifactId>MiteshTest_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
