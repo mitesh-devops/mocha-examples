@@ -46,7 +46,6 @@ project {
     vcsRoot(HttpsGithubComMiteshDevopsIstanbulCodeCoverageExampleGitRefsHeadsMaster)
 
     buildType(Kuberetes)
-    buildType(MochoTests)
     buildType(BuildTest)
     buildType(ExpressApp)
     buildType(CodeCoverageExample)
@@ -303,14 +302,6 @@ object Kuberetes : BuildType({
                 kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml
             """.trimIndent()
         }
-    }
-})
-
-object MochoTests : BuildType({
-    name = "mocho tests"
-
-    vcs {
-        root(DslContext.settingsRoot)
     }
 })
 
